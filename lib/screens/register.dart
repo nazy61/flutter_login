@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/button.dart';
@@ -11,6 +12,16 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final _registerButtonAction = TapGestureRecognizer();
+
+  @override
+  void didChangeDependencies() {
+    _registerButtonAction.onTap = () {
+      Navigator.pop(context);
+    };
+    super.didChangeDependencies();
+  }
+
   Widget _imageSection() {
     return const Center(
       child: Image(
@@ -89,13 +100,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
   Widget _buildBottomSection() {
     return Center(
       child: RichText(
-        text: const TextSpan(
+        text: TextSpan(
           text: "Joined us before? ",
-          style: TextStyle(color: Colors.black),
+          style: const TextStyle(color: Colors.black),
           children: [
             TextSpan(
               text: "Login",
-              style: TextStyle(
+              recognizer: _registerButtonAction,
+              style: const TextStyle(
                 color: Colors.red,
               ),
             ),
