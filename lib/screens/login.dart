@@ -131,7 +131,7 @@ class LoginScreen extends StatelessWidget {
                   style: const TextStyle(color: Colors.black),
                   children: [
                     TextSpan(
-                      text: "Register ",
+                      text: "Login ",
                       recognizer: TapGestureRecognizer()
                         ..onTap = () => print('Tap Here onTap'),
                       style: const TextStyle(
