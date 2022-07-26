@@ -124,6 +124,12 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
+            const SizedBox(height: 10.0),
             Center(
               child: RichText(
                 text: TextSpan(
