@@ -14,7 +14,10 @@ class LoginScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Image(image: AssetImage("assets/images/login_image.png")),
+            const Image(
+              image: AssetImage("assets/images/login_image.png"),
+              width: 200,
+            ),
             const SizedBox(height: 10.0),
             const Text(
               "Login",
